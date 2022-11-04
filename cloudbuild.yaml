@@ -33,7 +33,7 @@ steps:
 
   - id: Apply deploy
     name: gcr.io/cloud-builders/gke-deploy
-    args: ["apply", "--filename=kustomize-output.yaml",  "--cluster=mithlesh-cluster", "--location=asia-southeast1"]
+    args: ["apply", "--filename=kustomize-output.yaml",  "--cluster=$_GKE_CLUSTER", "--location=$_GKE_LOCATION"]
     env:
     - CLOUDSDK_COMPUTE_ZONE=$_GKE_LOCATION
     - CLOUDSDK_CONTAINER_CLUSTER=$_GKE_CLUSTER
