@@ -1,0 +1,7 @@
+bases:
+  - ./../../base
+patches:
+  - patch.yaml
+generators:
+  - configmap-generator.yaml
+  - secret-generator.yaml
