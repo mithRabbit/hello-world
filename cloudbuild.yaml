@@ -4,8 +4,8 @@ steps:
     args:
     - kms
     - decrypt
-    - "--ciphertext-file=build/kustomize/overlays/$_KUSTOMIZE_ENV/application.secrets.encrypted"
-    - "--plaintext-file=build/kustomize/overlays/$_KUSTOMIZE_ENV/application.secrets"
+    - "--ciphertext-file=kustomize/overlays/$_KUSTOMIZE_ENV/application.secrets.encrypted"
+    - "--plaintext-file=kustomize/overlays/$_KUSTOMIZE_ENV/application.secrets"
     - "--location=$_GKE_LOCATION"
     - "--keyring=mithlesh-key-ring"
     - "--key=hello-world-k8s"
