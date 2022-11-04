@@ -13,11 +13,11 @@ steps:
   - id: Build
     name: gcr.io/cloud-builders/docker
     entrypoint: bash
-    args: ["-c", "docker build -t asia.gcr.io/effective-might-323902/hello-world-k8s-jeremy . -f Dockerfile"]
+    args: ["-c", "docker build -t asia.gcr.io/effective-might-323902/hello-world-k8s-mithlesh . -f Dockerfile"]
 
   - id: Push
     name: gcr.io/cloud-builders/docker
-    args: ["push", "asia.gcr.io/effective-might-323902/hello-world-k8s-jeremy"]
+    args: ["push", "asia.gcr.io/effective-might-323902/hello-world-k8s-mithlesh"]
 
   - id: Generate manifest
     name: gcr.io/cloud-builders/gke-deploy
@@ -33,7 +33,7 @@ steps:
 
   - id: Apply deploy
     name: gcr.io/cloud-builders/gke-deploy
-    args: ["apply", "--filename=kustomize-output.yaml",  "--cluster=jeremy-cluster", "--location=asia-southeast1", "--namespace=jeremy"]
+    args: ["apply", "--filename=kustomize-output.yaml",  "--cluster=mithlesh-cluster", "--location=asia-southeast1"]
     env:
     - CLOUDSDK_COMPUTE_ZONE=$_GKE_LOCATION
     - CLOUDSDK_CONTAINER_CLUSTER=$_GKE_CLUSTER
