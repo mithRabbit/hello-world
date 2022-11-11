@@ -7,8 +7,9 @@ import (
 )
 
 func main() {
+	fmt.Println("Running server on :3000")
 	http.HandleFunc("/", HelloServer)
-	http.ListenAndServe(":8080", nil)
+	http.ListenAndServe(":3000", nil)
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
