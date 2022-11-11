@@ -12,5 +12,5 @@ func main() {
 }
 
 func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s %s!", r.URL.Path[1:], os.Getenv("one-time.credit-debit-card"))
+	fmt.Fprintf(w, "Hello, %s!", os.Getenv("one-time.credit-debit-card"))
 }

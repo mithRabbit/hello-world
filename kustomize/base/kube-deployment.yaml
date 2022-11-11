@@ -34,9 +34,10 @@ spec:
         image: asia.gcr.io/effective-might-323902/hello-world-k8s-mithlesh:1.0.3
         envFrom: 
           - configMapRef:
-              name: hello-world-k8s-mithlesh-env
+              name: hello-world-k8s-mithlesh-fee-env
           - secretRef:
               name: hello-world-k8s-mithlesh-env-secret
+
         resources:
           limits:
             cpu: 200m
