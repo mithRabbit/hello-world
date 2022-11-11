@@ -13,6 +13,5 @@ func main() {
 }
 
 func Config(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Config, %s", os.Getenv("one-time.credit-debit-card"))
-
+	fmt.Fprintf(w, "Config, %+v", os.Environ())
 }
