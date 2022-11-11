@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
       - name: helloworld
-        image: asia.gcr.io/effective-might-323902/hello-world-k8s-mithlesh:1.0.3
+        image: asia.gcr.io/effective-might-323902/hello-world-k8s-mithlesh:latest
         envFrom: 
           - configMapRef:
               name: hello-world-k8s-mithlesh-fee-env
