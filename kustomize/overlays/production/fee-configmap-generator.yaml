@@ -1,0 +1,8 @@
+apiVersion: builtin
+kind: ConfigMapGenerator
+metadata:
+  name: hello-world-k8s-mithlesh-fee-env
+envs:
+  - fee.properties
+options:
+  disableNameSuffixHash: true

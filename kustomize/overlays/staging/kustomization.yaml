@@ -5,3 +5,4 @@ patches:
 generators:
   - configmap-generator.yaml
   - secret-generator.yaml
+  - fee-configmap-generator.yaml
