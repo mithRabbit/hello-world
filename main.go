@@ -8,10 +8,11 @@ import (
 
 func main() {
 	fmt.Println("Running server on :3000")
-	http.HandleFunc("/", HelloServer)
+	http.HandleFunc("/", Config)
 	http.ListenAndServe(":3000", nil)
 }
 
-func HelloServer(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "Hello, %s %s %s!", r.URL.Path[1:], os.Getenv("FIRSTNAME"), os.Getenv("LASTNAME"))
+func Config(w http.ResponseWriter, r *http.Request) {
+	fmt.Fprintf(w, "Config, %s", os.Getenv("one-time.credit-debit-card"))
+
 }

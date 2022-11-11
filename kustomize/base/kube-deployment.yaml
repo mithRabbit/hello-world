@@ -37,7 +37,6 @@ spec:
               name: hello-world-k8s-mithlesh-fee-env
           - secretRef:
               name: hello-world-k8s-mithlesh-env-secret
-
         resources:
           limits:
             cpu: 200m
